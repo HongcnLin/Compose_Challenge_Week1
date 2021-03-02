@@ -8,11 +8,11 @@ Template repository for the Jetpack Compose [#AndroidDevChallenge](https://devel
 
 ## :scroll: Description
 <!--- Describe your app in one or two sentences -->
-冲呀，皮卡丘~
+compose实现的app, 宠物小精灵领养站！
 
-- Lists some dogs to be adopted.
-- Click to show details of each dog.
-- In the details page, click back button to go back to the list.
+- pokemon list.
+- Click to show details of pokemon.
+- 冲呀，皮卡丘~
 
 
 ## :bulb: Motivation and Context
@@ -22,7 +22,7 @@ Template repository for the Jetpack Compose [#AndroidDevChallenge](https://devel
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
-<img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">
+<img src="/results/screenshot_1.jpg" width="260">&emsp;<img src="/results/screenshot_2.jpg" width="260">
 
 
 ## License
