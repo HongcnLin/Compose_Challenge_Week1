@@ -17,6 +17,7 @@ package com.example.androiddevchallenge.data
 
 import androidx.annotation.ColorInt
 import androidx.annotation.DrawableRes
+import androidx.compose.ui.graphics.Color
 import java.io.Serializable
 
 /**
@@ -33,5 +34,5 @@ data class Pokemon(
     val species: String,
     val attribute: String,
     @DrawableRes val pictureResId: Int,
-    @ColorInt val bgColorId: Int
+    val bgColor: Color
 ) : Serializable

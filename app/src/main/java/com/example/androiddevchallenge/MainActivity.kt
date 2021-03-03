@@ -40,7 +40,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -126,7 +125,7 @@ fun PokemonList(pokemons: List<Pokemon>, onItemClick: (Pokemon) -> Unit = {}) {
 
 @Composable
 fun PokemonListItem1(pokemon: Pokemon, modifier: Modifier) {
-    Card(modifier, elevation = 4.dp, backgroundColor = colorResource(pokemon.bgColorId)) {
+    Card(modifier, elevation = 4.dp, backgroundColor = pokemon.bgColor) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Image(
                 painterResource(pokemon.pictureResId),
@@ -150,7 +149,7 @@ fun PokemonListItem1(pokemon: Pokemon, modifier: Modifier) {
 
 @Composable
 fun PokemonListItem2(pokemon: Pokemon, modifier: Modifier) {
-    Card(modifier, elevation = 4.dp, backgroundColor = colorResource(pokemon.bgColorId)) {
+    Card(modifier, elevation = 4.dp, backgroundColor = pokemon.bgColor) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Column(Modifier.padding(8.dp)) {
                 Text(

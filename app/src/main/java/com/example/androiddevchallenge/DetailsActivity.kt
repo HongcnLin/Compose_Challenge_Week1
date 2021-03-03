@@ -36,7 +36,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.data.Pokemon
@@ -65,7 +64,7 @@ fun PokeMonDetails(pokemon: Pokemon, onCapture: (Pokemon) -> Unit = {}) {
     Column(
         Modifier
             .fillMaxSize()
-            .background(colorResource(id = pokemon.bgColorId))
+            .background(pokemon.bgColor)
     ) {
         Image(
             painterResource(pokemon.pictureResId),

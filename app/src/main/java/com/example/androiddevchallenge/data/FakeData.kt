@@ -17,6 +17,8 @@ package com.example.androiddevchallenge.data
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import com.example.androiddevchallenge.R
 
 /**
@@ -27,25 +29,29 @@ import com.example.androiddevchallenge.R
  */
 class FakeData {
 
+    //<color name="p_piakaq">#FFF9C4</color>
+    //    <color name="p_miaow">#C8E6C9</color>
+    //    <color name="p_huoyn">#FFCDD2</color>
+    //    <color name="p_jidong">#B3E5FC</color>
     companion object {
         val pokemons by mutableStateOf(
             listOf(
                 Pokemon(
                     "ピカチュウ", "皮卡丘", "0.4m", "6kg",
-                    "陆地/精灵", "雷电", R.drawable.pikaq, R.color.p_piakaq
+                    "陆地/精灵", "雷电", R.drawable.pikaq, Color(0xFFFFF9C4)
                 ),
 
                 Pokemon(
                     "フシギダネ ", "妙蛙种子", "0.7m", "6.9kg",
-                    "植物/怪兽", "草/毒", R.drawable.miaowaz, R.color.p_miaow
+                    "植物/怪兽", "草/毒", R.drawable.miaowaz, Color(0xFFC8E6C9)
                 ),
                 Pokemon(
                     "ファイヤー ", "火焰鸟", "2m", "60kg",
-                    "天空/神兽", "火焰", R.drawable.huoyanniao, R.color.p_huoyn
+                    "天空/神兽", "火焰", R.drawable.huoyanniao, Color(0xFFFFCDD2)
                 ),
                 Pokemon(
                     "フリーザー ", "急冻鸟", "1.7m", "55kg",
-                    "天空/神兽", "冰雪", R.drawable.jidongn, R.color.p_jidong
+                    "天空/神兽", "冰雪", R.drawable.jidongn, Color(0xFFB3E5FC)
                 ),
             )
         )
