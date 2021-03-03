@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.composetest
+package com.example.androiddevchallenge.data
 
 import androidx.annotation.ColorInt
 import androidx.annotation.DrawableRes

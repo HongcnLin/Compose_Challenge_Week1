@@ -22,7 +22,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.ProvideTextStyle
 import androidx.compose.material.Text
@@ -33,7 +39,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.example.composetest.Pokemon
+import com.example.androiddevchallenge.data.Pokemon
 
 /**
  * Summary:
@@ -48,7 +54,7 @@ class DetailsActivity : AppCompatActivity() {
         val mPokemon: Pokemon = intent.getSerializableExtra("pokemon") as Pokemon
         setContent {
             PokeMonDetails(pokemon = mPokemon) {
-                Toast.makeText(this, "capture ${it.cnName}!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "capture ${it.cnName}!", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -76,7 +82,7 @@ fun PokeMonDetails(pokemon: Pokemon, onCapture: (Pokemon) -> Unit = {}) {
         ) {
             Column(Modifier.padding(16.dp, 1.dp)) {
                 Text(
-                    "${pokemon.name}",
+                    pokemon.name,
                     Modifier
                         .padding(vertical = 8.dp),
                     style = MaterialTheme.typography.h3
