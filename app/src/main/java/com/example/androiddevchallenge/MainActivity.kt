@@ -20,10 +20,9 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -48,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
 // Start building your app here!
 @Composable
 fun MyApp(context: Context?) {
@@ -75,25 +75,42 @@ fun MyApp(context: Context?) {
 
 @Composable
 fun PokemonList(pokemons: List<Pokemon>, onItemClick: (Pokemon) -> Unit = {}) {
-    Column(
+    LazyColumn(
         Modifier
             .background(Color.DarkGray)
             .padding(12.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
+//        for ((index, pk) in FakeData.pokemons.withIndex()) {
+//            if ((index % 2) == 0) {
+//                PokemonListItem1(pk,
+//                    Modifier
+//                        .clickable { onItemClick(pk) }
+//                        .fillMaxWidth()
+//                )
+//            } else {
+//                PokemonListItem2(pk,
+//                    Modifier
+//                        .clickable { onItemClick(pk) }
+//                        .fillMaxWidth()
+//                )
+//            }
+//        }
         for ((index, pk) in FakeData.pokemons.withIndex()) {
-            if ((index % 2) == 0) {
-                PokemonListItem1(pk,
-                    Modifier
-                        .clickable { onItemClick(pk) }
-                        .fillMaxWidth()
-                )
-            } else {
-                PokemonListItem2(pk,
-                    Modifier
-                        .clickable { onItemClick(pk) }
-                        .fillMaxWidth()
-                )
+            item {
+                if ((index % 2) == 0) {
+                    PokemonListItem1(pk,
+                        Modifier
+                            .clickable { onItemClick(pk) }
+                            .fillMaxWidth()
+                    )
+                } else {
+                    PokemonListItem2(pk,
+                        Modifier
+                            .clickable { onItemClick(pk) }
+                            .fillMaxWidth()
+                    )
+                }
             }
         }
     }

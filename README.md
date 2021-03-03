@@ -4,6 +4,9 @@ Google compose challenge week1
 
 Template repository for the Jetpack Compose [#AndroidDevChallenge](https://developer.android.com/dev-challenge).
 
+<!--- Replace <OWNER> with your Github Username and <REPOSITORY> with the name of your repository. -->
+<!--- You can find both of these in the url bar when you open your repository in github. -->
+![Workflow result](https://github.com/HongcnLin/Compose_Challenge_Week1/workflows/Check/badge.svg)
 
 
 ## :scroll: Description
@@ -12,7 +15,7 @@ compose实现的app, 宠物小精灵领养站！
 
 - pokemon list.
 - Click to show details of pokemon.
-- 冲呀，皮卡丘~
+- capture pokemon~  冲呀 皮卡丘！
 
 
 ## :bulb: Motivation and Context
